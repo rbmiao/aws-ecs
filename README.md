@@ -117,6 +117,8 @@ Cluster, EC2 instances are gone!
 Reference:
 ===
 
+Using Amazon ECR with the AWS CLI: https://docs.aws.amazon.com/AmazonECR/latest/userguide/getting-started-cli.html
+
 Follow the curriculum on [docker-curriculum.com](https://docker-curriculum.com/)
 
 
