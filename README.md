@@ -1,11 +1,8 @@
 
 
 
-Deploy a Docker App to AWS using Elastic Container Service (ECS)
+Deploy a Docker Python App to AWS using Elastic Container Service (ECS)
 ===
-
-> Learn to build and deploy your distributed applications easily to the cloud with Docker
-
 
 
 Create docker image and push to AWS:
@@ -15,8 +12,8 @@ Create docker image and push to AWS:
 * Fetch source code:
 ```
 mkdir aws-ecs && cd aws-ecs
-git clone https://github.com/prakhar1989/docker-curriculum.git
-cd docker-curriculum/flask-app
+git clone https://github.com/rbmiao/aws-ecs.git
+cd aws-ecs/flask-app
 docker build -t rbmiao/catnip .
 docker run -p 8889:5000 rbmiao/catnip
 ```
@@ -103,12 +100,20 @@ d04ba1af2b41        amazon/amazon-ecs-agent:latest                              
 
 * In order to make docker container accessible from internet. That port :8888 mapping to docker container needs to open in Security group. Click SG -> pick up the SG, edit rule, add tcp:8888 to it.
 
-* Since this docker container is running on EC2 instance which has a public IP. To access the docker container web app: http://ec2-18-212-216-153.compute-1.amazonaws.com:8888/   You web comes.
+* Since this docker container is running on EC2 instance which has a public IP. To access the docker container web app: http://ec2-18-212-216-153.compute-1.amazonaws.com:8888/   
+
+* You web comes.
 
 
 
+Clean up AWS ECS cluster
+===
+Login to AWS ECS, cluster -> right top: Delete Cluster.
 
-*
+Cluster, EC2 instances are gone!
+
+
+
 Reference:
 ===
 
